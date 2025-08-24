@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ededed;
+}
+
+a {
+    text-decoration: none;
+}
+
+form {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 0 0 #000000;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-top: 16px;
+    color: #333;
+}
+
+span.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+    display: none;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+form input[type="text"]:focus,
+form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+form button {
+    display: block;
+    width: 100%; /* Make button full width */
+    max-width: 200px; /* Ensure button doesn't get too large */
+    padding: 10px 15px;
+    background-color: #fa5f94;
+    color: #fff;
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #e65788;
+}
+
+/*HEADER*/
+header {
+    padding: 10px 0;
+    background-color: #fa5f94;
+    box-shadow: 5px 5px 0 0 #000000;
+    color: #ffffff;
+}
+
+header h1,
+header p {
+    margin-left: 24px;
+}
+
+/*MAIN*/
+main {
+    margin: 24px;
+}
+
+main header {
+    padding-left: 24px;
+    width: 25%;
+}
+
+main section {
+    margin-top: 24px;
+}
+
+main section div article {
+    background-color: #ffffff;
+    box-shadow: 5px 5px 0 0 #000000;
+    padding: 12px;
+    margin-top: 12px;
+}
+
+/*CONTENT-CONTAINER*/
+main section div.content-container {
+    margin-top: 4px;
+}
+
+/*ADD NOTE*/
+section#add header {
+    all: unset;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+section#add header .title-container {
+    padding: 10px 0 10px 24px;
+    width: 25%;
+    background-color: #fa5f94;
+    box-shadow: 5px 5px 0 0 #000000;
+    color: #ffffff;
+    display: inline-block;
+    height: auto;
+}
+
+section#add header button {
+    border: none;
+    top: 0;
+    padding: 0 24px;
+    height: 100%;
+    position: absolute;
+    font-size: 16px;
+    margin-left: 8px;
+    color: #ffffff;
+    background-color: #fa5f94;
+    box-shadow: 5px 5px 0 0 #000000;
+}
+
+section#add button:hover {
+    cursor: pointer;
+}
+
+/*LIST NOTE*/
+section#list div.content-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+section#list div.content-container article {
+    padding: 12px;
+}
+
+section#list div.content-container article:hover {
+    padding: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    transform: scale(1.05);
+}
+
+section#list div.content-container article p {
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+section#list div.content-container article p.date {
+    font-size: 12px;
+    margin-top: 4px;
+    color: #5a5a5a;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    main header {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1,
+    header p {
+        margin-left: 10px;
+    }
+
+    main header {
+        width: 100%;
+    }
+
+    section#add header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section#add header .title-container {
+        width: 100%;
+        display: block;
+        margin-bottom: 16px;
+    }
+
+    section#add header button {
+        position: unset;
+        margin-left: unset;
+        min-height: 40px;
+        width: 50%;
+    }
+
+    section#list div.content-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    section#list div.content-container {
+        grid-template-columns: 1fr;
+    }
+
+    form button {
+        width: 100%;
+    }
+
+    section#add header button {
+        width: 100%;
+    }
+
+    header h1,
+    header p {
+        font-size: 18px;
+        margin-left: 8px;
+    }
+}
