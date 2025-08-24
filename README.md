@@ -18,7 +18,7 @@ To run this project locally, you need a local web server due to browser security
 1. **Clone the repository:**
 
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/arieftb/note-b-web.git
    cd noteb
    ```
 
